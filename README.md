@@ -52,7 +52,7 @@ npm run build
 
 مشاهده آنلاین
 برای مشاهده نسخه آنلاین پروژه، روی لینک زیر کلیک کنید:
-https://admin-dashboard-beryl-six-37.vercel.app/
+https://admin-dashboard-beryl-six-37.vercel.app
 
 ساختار پروژه
 
