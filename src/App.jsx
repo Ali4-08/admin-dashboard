@@ -33,7 +33,7 @@ function App() {
       <div className="flex-1 md:ml-64">
         <Navbar onMenuClick={() => setSidebarOpen(true)}/>
        
-       <div className="flex-1 sm:p-6 min-h-[calc(100vh-3.75rem)]">
+       <div className="flex-1 sm:p-6 min-h-[calc(100vh-3.75rem)] p-2">
         <Routes>
           
           <Route path="/" element={ 
