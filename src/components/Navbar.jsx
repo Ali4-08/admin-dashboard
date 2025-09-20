@@ -20,7 +20,7 @@ export default function Navbar({onMenuClick}){
         <nav className="flex justify-between bg-white dark:bg-gray-800 dark:text-gray-100 p-4 shadow sticky top-0 z-10">
 
             <button className="md:hidden" onClick={onMenuClick}>
-                <Menu className="w-6 h-6 text-gray-800"/>
+                <Menu className="w-6 h-6 text-gray-800 dark:text-gray-100"/>
             </button>
 
             <h1 className="text-xl font-bold text-gray-800 dark:text-gray-100">Admin Dashboard</h1>
