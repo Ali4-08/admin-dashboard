@@ -56,7 +56,7 @@ export default function Products() {
   };
 
   return (
-    <div className="p-6 max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto p-2 sm:p-4">
       <h2 className="text-2xl font-bold mb-4">Products Management</h2>
 
       <form
@@ -102,7 +102,7 @@ export default function Products() {
         </button>
       </form>
 
-      <table className="min-w-full border border-gray-200 text-left rounded-lg dark:bg-gray-800 dark:text-gray-100">
+      <table className="min-w-full border border-gray-200 text-center sm:text-left rounded-lg dark:bg-gray-800 dark:text-gray-100">
         <thead className="bg-gray-100 text-gray-700 text-sm dark:bg-gray-800 dark:text-gray-100">
           <tr>
             <th className="px-4 py-3 border-b">ID</th>
@@ -125,21 +125,23 @@ export default function Products() {
               key={product.id}
               className="hover:bg-gray-100 dark:hover:bg-gray-700 text-sm transition"
             >
-              <td className="px-4 py-2 border-b">{product.id}</td>
-              <td className="px-4 py-2 border-b">{product.name}</td>
-              <td className="px-4 py-2 border-b">{product.price}</td>
-              <td className="px-4 py-2 border-b">{product.qty}</td>
+              <td className="sm:px-2 py-2 border-b">{product.id}</td>
+              <td className="sm:px-2 py-2 border-b">{product.name}</td>
+              <td className="sm:px-2 py-2 border-b">{product.price}</td>
+              <td className="sm:px-2 py-2 border-b">{product.qty}</td>
               
-              <td className="px-4 py-2 border-b space-x-2">
-                <button className="bg-red-500 hover:bg-red-600 text-white rounded px-4 py-1"
+              <td className="sm:px-2 py-2 border-b space-x-1 space-y-1">
+                <div className="flex flex-col sm:flex-row gap-1">
+                  <button className="bg-red-500 hover:bg-red-600 text-white rounded py-1 w-[70px]"
                 onClick={() => handleDelete(product.id)}>
                     Delete
                 </button>
 
-                <button className="bg-green-500 hover:bg-green-600 text-white rounded px-4 py-1"
+                <button className="bg-green-500 hover:bg-green-600 text-white rounded py-1 w-[70px]"
                 onClick={() => handleEdit(product)}>
                     Edit
                 </button>
+                </div>
               </td>
 
             </tr>

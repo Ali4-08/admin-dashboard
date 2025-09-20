@@ -15,7 +15,7 @@ export default function UserTable() {
     );
 
   return (
-    <div className="bg-white rounded-xl shadow p-6 mt-8 dark:bg-gray-800 dark:text-gray-100">
+    <div className="bg-white rounded-xl shadow mt-8 dark:bg-gray-800 dark:text-gray-100">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-4">
         <h2 className="text-xl font-semibold">Users</h2>
 
@@ -28,7 +28,7 @@ export default function UserTable() {
         />
       </div>
 
-      <div className="overflow-x-auto">
+      <div className="">
         <table className="min-w-full border border-gray-200 text-left rounded-lg dark:bg-gray-800 dark:text-gray-100">
           <thead className="bg-gray-100 text-gray-700 text-sm dark:bg-gray-800 dark:text-gray-100">
             <tr>

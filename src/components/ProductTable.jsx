@@ -14,7 +14,7 @@ export default function ProductTable() {
     );
 
   return (
-    <div className="bg-white rounded-xl shadow p-6 mt-8 dark:bg-gray-800 dark:text-gray-100">
+    <div className="bg-white rounded-xl shadow mt-8 dark:bg-gray-800 dark:text-gray-100">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-4">
         <h2 className="text-xl font-semibold">Products</h2>
 

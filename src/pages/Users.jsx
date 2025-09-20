@@ -55,7 +55,7 @@ export default function Users() {
   };
 
   return (
-    <div className="p-6 max-w-4xl mx-auto">
+    <div className="p-4 sm:p-6 max-w-4xl mx-auto">
       <h2 className="text-2xl font-bold mb-4">Users Management</h2>
 
       <form
@@ -101,14 +101,14 @@ export default function Users() {
         </button>
       </form>
 
-      <table className="min-w-full border border-gray-200 text-left rounded-lg dark:bg-gray-800 dark:text-gray-100">
+      <table className="min-w-full border border-gray-200 text-center sm:text-left rounded-lg dark:bg-gray-800 dark:text-gray-100">
         <thead className="bg-gray-100 text-gray-700 text-sm dark:bg-gray-800 dark:text-gray-100">
           <tr>
-            <th className="px-4 py-3 border-b">ID</th>
-            <th className="px-4 py-3 border-b">Name</th>
-            <th className="px-4 py-3 border-b">Email</th>
-            <th className="px-4 py-3 border-b">Role</th>
-            <th className="px-4 py-3 border-b">Action</th>
+            <th className="sm:px-4 py-3 border-b">ID</th>
+            <th className="px-1 sm:px-4 py-3 border-b">Name</th>
+            <th className="sm:px-4 py-3 border-b">Email</th>
+            <th className="sm:px-4 py-3 border-b">Role</th>
+            <th className="sm:px-4 py-3 border-b">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -126,21 +126,23 @@ export default function Users() {
               key={user.id}
               className="hover:bg-gray-100 dark:hover:bg-gray-700 text-sm transition"
             >
-              <td className="px-4 py-2 border-b">{user.id}</td>
-              <td className="px-4 py-2 border-b">{user.name}</td>
-              <td className="px-4 py-2 border-b">{user.email}</td>
-              <td className="px-4 py-2 border-b">{user.role}</td>
+              <td className="sm:px-4 py-2 border-b">{user.id}</td>
+              <td className="sm:px-4 py-2 border-b">{user.name}</td>
+              <td className="sm:px-4 py-2 border-b">{user.email}</td>
+              <td className="sm:px-4 py-2 border-b">{user.role}</td>
               
               <td className="px-4 py-2 border-b space-x-2">
-                <button className="bg-red-500 hover:bg-red-600 text-white rounded px-4 py-1"
+                <div className="flex flex-col sm:flex-row gap-1">
+                  <button className="bg-red-500 hover:bg-red-600 text-white rounded w-[70px] py-1"
                 onClick={() => handleDelete(user.id)}>
                     Delete
                 </button>
 
-                <button className="bg-green-500 hover:bg-green-600 text-white rounded px-4 py-1"
+                <button className="bg-green-500 hover:bg-green-600 text-white rounded w-[70px] py-1"
                 onClick={() => handleEdit(user)}>
                     Edit
                 </button>
+                </div>
               </td>
 
             </tr>

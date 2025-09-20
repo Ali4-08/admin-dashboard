@@ -2,7 +2,7 @@ import { Users, Package, DollarSign, ShoppingCart } from "lucide-react";
 
 import Card from "../components/Card";
 import Chart from "../components/Chart";
-import UserTable from "../components/Table";
+import UserTable from "../components/UserTable";4
 import ProductTable from "../components/ProductTable";
 
 const stats = [
