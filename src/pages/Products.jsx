@@ -102,52 +102,50 @@ export default function Products() {
         </button>
       </form>
 
-      <table className="min-w-full border border-gray-200 text-center sm:text-left rounded-lg dark:bg-gray-800 dark:text-gray-100">
-        <thead className="bg-gray-100 text-gray-700 text-sm dark:bg-gray-800 dark:text-gray-100">
-          <tr>
-            <th className="px-4 py-3 border-b">ID</th>
-            <th className="px-4 py-3 border-b">Name</th>
-            <th className="px-4 py-3 border-b">Price</th>
-            <th className="px-4 py-3 border-b">QTY</th>
-            <th className="px-4 py-3 border-b">Action</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {products.length === 0 && (
-            <tr className="text-center text-gray-500 text-sm">
-              <td colSpan={5}>not products yet</td>
+      <div className="overflow-x-auto">
+        <table className="min-w-full border border-gray-200 text-center sm:text-left rounded-lg dark:bg-gray-800 dark:text-gray-100">
+          <thead className="bg-gray-100 text-gray-700 text-sm dark:bg-gray-800 dark:text-gray-100">
+            <tr>
+              <th className="px-4 py-3 border-b">ID</th>
+              <th className="px-4 py-3 border-b">Name</th>
+              <th className="px-4 py-3 border-b">Price</th>
+              <th className="px-4 py-3 border-b">QTY</th>
+              <th className="px-4 py-3 border-b">Action</th>
             </tr>
-          )}
-
-          {products.map((product) => (
-            <tr
-              key={product.id}
-              className="hover:bg-gray-100 dark:hover:bg-gray-700 text-sm transition"
-            >
-              <td className="sm:px-2 py-2 border-b">{product.id}</td>
-              <td className="sm:px-2 py-2 border-b">{product.name}</td>
-              <td className="sm:px-2 py-2 border-b">{product.price}</td>
-              <td className="sm:px-2 py-2 border-b">{product.qty}</td>
-              
-              <td className="sm:px-2 py-2 border-b space-x-1 space-y-1">
-                <div className="flex flex-col sm:flex-row gap-1">
-                  <button className="bg-red-500 hover:bg-red-600 text-white rounded py-1 w-[70px]"
-                onClick={() => handleDelete(product.id)}>
-                    Delete
-                </button>
-
-                <button className="bg-green-500 hover:bg-green-600 text-white rounded py-1 w-[70px]"
-                onClick={() => handleEdit(product)}>
-                    Edit
-                </button>
-                </div>
-              </td>
-
-            </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {products.length === 0 && (
+              <tr className="text-center text-gray-500 text-sm">
+                <td colSpan={5}>not products yet</td>
+              </tr>
+            )}
+            {products.map((product) => (
+              <tr
+                key={product.id}
+                className="hover:bg-gray-100 dark:hover:bg-gray-700 text-sm transition"
+              >
+                <td className="sm:px-2 py-2 border-b">{product.id}</td>
+                <td className="sm:px-2 py-2 border-b">{product.name}</td>
+                <td className="sm:px-2 py-2 border-b">{product.price}</td>
+                <td className="sm:px-2 py-2 border-b">{product.qty}</td>
+        
+                <td className="sm:px-2 py-2 border-b space-x-1 space-y-1">
+                  <div className="flex flex-col sm:flex-row gap-1">
+                    <button className="bg-red-500 hover:bg-red-600 text-white rounded py-1 w-[70px]"
+                  onClick={() => handleDelete(product.id)}>
+                      Delete
+                  </button>
+                  <button className="bg-green-500 hover:bg-green-600 text-white rounded py-1 w-[70px]"
+                  onClick={() => handleEdit(product)}>
+                      Edit
+                  </button>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

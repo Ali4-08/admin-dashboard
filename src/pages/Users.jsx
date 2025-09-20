@@ -101,54 +101,52 @@ export default function Users() {
         </button>
       </form>
 
-      <table className="min-w-full border border-gray-200 text-center sm:text-left rounded-lg dark:bg-gray-800 dark:text-gray-100">
-        <thead className="bg-gray-100 text-gray-700 text-sm dark:bg-gray-800 dark:text-gray-100">
-          <tr>
-            <th className="sm:px-4 py-3 border-b">ID</th>
-            <th className="px-1 sm:px-4 py-3 border-b">Name</th>
-            <th className="sm:px-4 py-3 border-b">Email</th>
-            <th className="sm:px-4 py-3 border-b">Role</th>
-            <th className="sm:px-4 py-3 border-b">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-
-          {users.length === 0 && (
-            <tr className="text-center text-gray-500 text-sm">
-                <td colSpan={5}>
-                    not users yet
+      <div className="overflow-x-auto">
+        <table className="min-w-full border border-gray-200 text-center sm:text-left rounded-lg dark:bg-gray-800 dark:text-gray-100">
+          <thead className="bg-gray-100 text-gray-700 text-sm dark:bg-gray-800 dark:text-gray-100">
+            <tr>
+              <th className="sm:px-4 py-3 border-b">ID</th>
+              <th className="px-1 sm:px-4 py-3 border-b">Name</th>
+              <th className="sm:px-4 py-3 border-b">Email</th>
+              <th className="sm:px-4 py-3 border-b">Role</th>
+              <th className="sm:px-4 py-3 border-b">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {users.length === 0 && (
+              <tr className="text-center text-gray-500 text-sm">
+                  <td colSpan={5}>
+                      not users yet
+                  </td>
+              </tr>
+            )}
+            {users.map((user) => (
+              <tr
+                key={user.id}
+                className="hover:bg-gray-100 dark:hover:bg-gray-700 text-sm transition"
+              >
+                <td className="sm:px-4 py-2 border-b">{user.id}</td>
+                <td className="sm:px-4 py-2 border-b">{user.name}</td>
+                <td className="sm:px-4 py-2 border-b">{user.email}</td>
+                <td className="sm:px-4 py-2 border-b">{user.role}</td>
+        
+                <td className="px-4 py-2 border-b space-x-2">
+                  <div className="flex flex-col sm:flex-row gap-1">
+                    <button className="bg-red-500 hover:bg-red-600 text-white rounded w-[70px] py-1"
+                  onClick={() => handleDelete(user.id)}>
+                      Delete
+                  </button>
+                  <button className="bg-green-500 hover:bg-green-600 text-white rounded w-[70px] py-1"
+                  onClick={() => handleEdit(user)}>
+                      Edit
+                  </button>
+                  </div>
                 </td>
-            </tr>
-          )}
-
-          {users.map((user) => (
-            <tr
-              key={user.id}
-              className="hover:bg-gray-100 dark:hover:bg-gray-700 text-sm transition"
-            >
-              <td className="sm:px-4 py-2 border-b">{user.id}</td>
-              <td className="sm:px-4 py-2 border-b">{user.name}</td>
-              <td className="sm:px-4 py-2 border-b">{user.email}</td>
-              <td className="sm:px-4 py-2 border-b">{user.role}</td>
-              
-              <td className="px-4 py-2 border-b space-x-2">
-                <div className="flex flex-col sm:flex-row gap-1">
-                  <button className="bg-red-500 hover:bg-red-600 text-white rounded w-[70px] py-1"
-                onClick={() => handleDelete(user.id)}>
-                    Delete
-                </button>
-
-                <button className="bg-green-500 hover:bg-green-600 text-white rounded w-[70px] py-1"
-                onClick={() => handleEdit(user)}>
-                    Edit
-                </button>
-                </div>
-              </td>
-
-            </tr>
-          ))}
-        </tbody>
-      </table>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

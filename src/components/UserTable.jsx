@@ -28,7 +28,7 @@ export default function UserTable() {
         />
       </div>
 
-      <div className="">
+      <div className="overflow-x-auto">
         <table className="min-w-full border border-gray-200 text-left rounded-lg dark:bg-gray-800 dark:text-gray-100">
           <thead className="bg-gray-100 text-gray-700 text-sm dark:bg-gray-800 dark:text-gray-100">
             <tr>
