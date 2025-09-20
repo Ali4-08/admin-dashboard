@@ -23,7 +23,7 @@ export default function Navbar({onMenuClick}){
                 <Menu className="w-6 h-6 text-gray-800 dark:text-gray-100"/>
             </button>
 
-            <h1 className="text-lg sm:text-xl font-bold text-gray-800 dark:text-gray-100">Admin Dashboard</h1>
+            <h1 className="hidden sm:block  text-lg sm:text-xl font-bold text-gray-800 dark:text-gray-100">Admin Dashboard</h1>
 
             <button 
             className="cursor-pointer rounded dark:hover:bg-gray-700 transition"
