@@ -36,7 +36,7 @@
 
 ```bash
 # کلون کردن ریپازیتوری
-git clone <your-github-repo-link>
+git clone <https://github.com/Ali4-08/admin-dashboard.git>
 cd <project-folder>
 
 # نصب وابستگی‌ها
